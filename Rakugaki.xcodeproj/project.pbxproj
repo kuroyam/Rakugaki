@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4938ABA01CAEB158007E3B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938AB9F1CAEB158007E3B9E /* AppDelegate.swift */; };
-		4938ABA21CAEB158007E3B9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938ABA11CAEB158007E3B9E /* ViewController.swift */; };
 		4938ABA51CAEB158007E3B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938ABA31CAEB158007E3B9E /* Main.storyboard */; };
 		4938ABA71CAEB158007E3B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4938ABA61CAEB158007E3B9E /* Assets.xcassets */; };
 		4938ABAA1CAEB158007E3B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938ABA81CAEB158007E3B9E /* LaunchScreen.storyboard */; };
 		4938ABB51CAEB158007E3B9E /* RakugakiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938ABB41CAEB158007E3B9E /* RakugakiTests.swift */; };
 		4938ABC01CAEB158007E3B9E /* RakugakiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938ABBF1CAEB158007E3B9E /* RakugakiUITests.swift */; };
+		4938ABD11CAEC43C007E3B9E /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938ABCF1CAEC43C007E3B9E /* DrawViewController.swift */; };
+		4938ABD21CAEC43C007E3B9E /* DrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4938ABD01CAEC43C007E3B9E /* DrawViewController.xib */; };
+		4938ABD51CAED453007E3B9E /* DrawableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938ABD41CAED453007E3B9E /* DrawableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		4938AB9C1CAEB158007E3B9E /* Rakugaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakugaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4938AB9F1CAEB158007E3B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4938ABA11CAEB158007E3B9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4938ABA41CAEB158007E3B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4938ABA61CAEB158007E3B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4938ABA91CAEB158007E3B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		4938ABBB1CAEB158007E3B9E /* RakugakiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RakugakiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4938ABBF1CAEB158007E3B9E /* RakugakiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakugakiUITests.swift; sourceTree = "<group>"; };
 		4938ABC11CAEB158007E3B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4938ABCF1CAEC43C007E3B9E /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		4938ABD01CAEC43C007E3B9E /* DrawViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawViewController.xib; sourceTree = "<group>"; };
+		4938ABD41CAED453007E3B9E /* DrawableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,7 @@
 		4938AB9E1CAEB158007E3B9E /* Rakugaki */ = {
 			isa = PBXGroup;
 			children = (
-				4938AB9F1CAEB158007E3B9E /* AppDelegate.swift */,
-				4938ABA11CAEB158007E3B9E /* ViewController.swift */,
+				4938ABCD1CAEB1B8007E3B9E /* Classes */,
 				4938ABA31CAEB158007E3B9E /* Main.storyboard */,
 				4938ABA61CAEB158007E3B9E /* Assets.xcassets */,
 				4938ABA81CAEB158007E3B9E /* LaunchScreen.storyboard */,
@@ -123,6 +126,33 @@
 				4938ABC11CAEB158007E3B9E /* Info.plist */,
 			);
 			path = RakugakiUITests;
+			sourceTree = "<group>";
+		};
+		4938ABCD1CAEB1B8007E3B9E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4938AB9F1CAEB158007E3B9E /* AppDelegate.swift */,
+				4938ABCE1CAEB1C9007E3B9E /* ViewControllers */,
+				4938ABD31CAED3EE007E3B9E /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4938ABCE1CAEB1C9007E3B9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4938ABCF1CAEC43C007E3B9E /* DrawViewController.swift */,
+				4938ABD01CAEC43C007E3B9E /* DrawViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4938ABD31CAED3EE007E3B9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4938ABD41CAED453007E3B9E /* DrawableView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4938ABD21CAEC43C007E3B9E /* DrawViewController.xib in Resources */,
 				4938ABAA1CAEB158007E3B9E /* LaunchScreen.storyboard in Resources */,
 				4938ABA71CAEB158007E3B9E /* Assets.xcassets in Resources */,
 				4938ABA51CAEB158007E3B9E /* Main.storyboard in Resources */,
@@ -259,7 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4938ABA21CAEB158007E3B9E /* ViewController.swift in Sources */,
+				4938ABD51CAED453007E3B9E /* DrawableView.swift in Sources */,
+				4938ABD11CAEC43C007E3B9E /* DrawViewController.swift in Sources */,
 				4938ABA01CAEB158007E3B9E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
