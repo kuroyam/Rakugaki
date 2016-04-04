@@ -2,11 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10116"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawViewController" customModule="Rakugaki" customModuleProvider="target">
             <connections>
+                <outlet property="drawableView" destination="C9H-VG-7PP" id="Vlq-pt-78i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +15,19 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9H-VG-7PP" customClass="DrawableView" customModule="Rakugaki" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="C9H-VG-7PP" secondAttribute="trailing" id="1o0-Vr-53k"/>
+                <constraint firstItem="C9H-VG-7PP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Avs-dn-U2R"/>
+                <constraint firstAttribute="bottom" secondItem="C9H-VG-7PP" secondAttribute="bottom" id="Sk5-vo-V1l"/>
+                <constraint firstItem="C9H-VG-7PP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vyX-ZP-Ofg"/>
+            </constraints>
         </view>
     </objects>
 </document>

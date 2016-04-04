@@ -10,6 +10,8 @@ import UIKit
 
 class DrawViewController: UIViewController {
     
+    @IBOutlet weak var drawableView: DrawableView!
+    
     override func loadView() {
         if let view = UINib(nibName: "DrawViewController", bundle: nil).instantiateWithOwner(self, options: nil).first as? UIView {
             self.view = view
@@ -19,9 +21,6 @@ class DrawViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let drawableView = DrawableView(frame: view.frame)
-        drawableView.backgroundColor = UIColor.whiteColor()
-        view.addSubview(drawableView)
     }
     
 }
